@@ -1,0 +1,22 @@
+use strict;
+use warninhs;
+
+my @todo_list;
+
+sub add_task {
+    my ($task) = @_;
+    push @todo_list, $task;
+    print "Added: $task\n";
+}
+
+sub display_tasks {
+    print "To-Do List:\n";
+    foreach my $task (@todo_list) {
+        print "- $task\n";
+    }
+}
+
+# Example usage
+add_task("Learn per");
+add_task("Build an app");
+display_tasks();
